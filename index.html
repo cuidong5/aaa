@@ -5,6 +5,18 @@
 		<title></title>
 	</head>
 	<body>
-		
+		<input type="text" name="" value="" id="inpt" />
+		<button id="btn">按钮</button>
 	</body>
 </html>
+<script>
+	var oln=document.getElementById('inpt');
+	var oBtn=document.getElementById('btn');
+	oln.oninput=function(){
+		if(oln.value.length>60){
+			oBtn.setAttribute('disabled','true')
+		}else{
+			oBtn.removeAttribute('disabled')
+		}
+	}
+</script>
